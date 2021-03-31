@@ -150,4 +150,11 @@
         </plugins>
     </build>
 
+	<developers>
+		<developer>
+			<name>Samanta Fluture</name>
+			<email>samantafluture@gmail.com</email>
+		</developer>
+	</developers>
+
 </project>
