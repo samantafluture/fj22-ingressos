@@ -11,8 +11,9 @@
 
         <h3>Nova sessão para sala: ${sala.nome}</h3>
 
-        <form action='/admin/sessao' method="post">
-            <input type="hidden" name="salaId" value="${sala.id}">
+		<form action='/admin/sessao' method="post">
+            <input type="hidden" name="id" value="${form.filmeId}">
+            <input type="hidden" name="salaId" value="${form.salaId}">
 
             <div class="form-group">
                 <label for="horario">Horario:</label>
