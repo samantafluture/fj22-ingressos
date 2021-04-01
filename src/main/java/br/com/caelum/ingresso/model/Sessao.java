@@ -14,16 +14,16 @@ public class Sessao {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private LocalTime horario;
-	
+
 	@ManyToOne
 	private Sala sala;
-	
+
 	@ManyToOne
 	private Filme filme;
-	
+
 	/**
-	* @deprecated hibernate only
-	*/
+	 * @deprecated hibernate only
+	 */
 	public Sessao() {
 	}
 
@@ -64,6 +64,5 @@ public class Sessao {
 	public void setFilme(Filme filme) {
 		this.filme = filme;
 	}
-	
-	
+
 }
