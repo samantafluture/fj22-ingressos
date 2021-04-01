@@ -21,12 +21,11 @@ import java.util.Optional;
 @Controller
 public class SalaController {
 
-    @Autowired
+	@Autowired
+	private SessaoDao sessaoDao;
+	   
+	@Autowired
     private SalaDao salaDao;
-    
-    @Autowired
-    private SessaoDao sessaoDao;
-
 
     @GetMapping({"/admin/sala", "/admin/sala/{id}"})
     public ModelAndView form(@PathVariable("id") Optional<Integer> id, SalaForm salaForm) {
