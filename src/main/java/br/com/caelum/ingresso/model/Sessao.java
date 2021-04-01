@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Sessao {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private LocalTime horario;
 	
