@@ -8,33 +8,30 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-@Entity 
+@Entity
 public class Sessao {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private LocalTime horario;
 	
-	 @Id
-     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	 private Integer id;
-	 private LocalTime horario;
-	 
-	 @ManyToOne
-	 private Sala sala;
-	 
-	 @ManyToOne
-	 private Filme filme;
+	@ManyToOne
+	private Sala sala;
 	
-	 /**
-	  * @deprecated hibernate only
-	  */
-	 public Sessao() {
-		 
-	 }
-	 
-	 public Sessao(LocalTime horario, Filme filme, Sala sala) {
-		 
-		 this.horario = horario;
-		 this.filme = filme;
-		 this.sala = sala;
-	 }
+	@ManyToOne
+	private Filme filme;
+	
+	/**
+	* @deprecated hibernate only
+	*/
+	public Sessao() {
+	}
+
+	public Sessao(LocalTime horario, Filme filme, Sala sala) {
+		this.horario = horario;
+		this.filme = filme;
+		this.sala = sala;
+	}
 
 	public Integer getId() {
 		return id;
@@ -67,5 +64,6 @@ public class Sessao {
 	public void setFilme(Filme filme) {
 		this.filme = filme;
 	}
-	 
+	
+	
 }

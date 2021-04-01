@@ -123,19 +123,6 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.2.12</version>
         </dependency>
-        
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.25</version>
-    </dependency>
-    
-    <dependency>
-  	  <groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-jdk14</artifactId>
-    	<version>1.7.25</version>
-	</dependency>
-  
     </dependencies>
     <build>
         <finalName>ingresso</finalName>
@@ -162,12 +149,10 @@
             </plugin>
         </plugins>
     </build>
-
-	<developers>
-		<developer>
-			<name>Samanta Fluture</name>
-			<email>samantafluture@gmail.com</email>
-		</developer>
-	</developers>
-
+    <developers>
+        <developer>
+            <name>Samanta Fluture</name>
+            <email>samantafluture@gmail.com</email>
+        </developer>
+    </developers>
 </project>
