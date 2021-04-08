@@ -49,6 +49,7 @@ public class CompraController {
 		ModelAndView modelAndView = new ModelAndView("compra/pagamento");
 
 		modelAndView.addObject("carrinho", carrinho);
+		modelAndView.addObject("cartao", cartao);
 		return modelAndView;
 	}
 
