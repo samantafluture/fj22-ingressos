@@ -39,8 +39,8 @@
 								<c:forEach var="lugar" items="${map.value}">
 									<td class="fileira-assento"><figure>
 										<svg
-															class="assento ${sessao.isDisponivel(lugar) ? 'disponivel' : 'ocupado'}"
-															onclick="${sessao.isDisponivel(lugar) ? 'changeCheckbox(this)' : '' }"
+															class="assento ${sessao.isDisponivel(lugar) && !carrinho.isSelecionado(lugar) ? 'disponivel' : 'ocupado' }"
+															onclick="${sessao.isDisponivel(lugar) && !carrinho.isSelecionado(lugar) ? 'changeCheckbox(this)' : '' }"
 															data-lugar="${lugar}" id="${lugar.id}" version="1.0"
 															id="SEAT" xmlns="http://www.w3.org/2000/svg"
 															xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -79,8 +79,10 @@
 								</tr>
 							</table>
 							
+								
 								<td>
 						
+							
 							</tr>
 					</c:forEach>
 					<tr class="telao">

@@ -100,7 +100,7 @@ public class FilmeController {
 		return modelAndView;
 	}
 
-	@DeleteMapping("/admin/filme/{id}")
+	@DeleteMapping(value = "/admin/filme/{id}")
 	@ResponseBody
 	@Transactional
 	public void delete(@PathVariable("id") Integer id) {
