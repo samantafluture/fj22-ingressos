@@ -22,6 +22,7 @@ public class FilmeDao {
     }
 
     public void save(Filme filme) {
+        //manager.merge(filme);
         manager.persist(filme);
     }
 

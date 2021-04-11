@@ -1,12 +1,13 @@
 package br.com.caelum.ingresso.model;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * Created by nando on 03/03/17.
@@ -23,6 +24,9 @@ public class Lugar {
 
     @NotNull
     private Integer posicao;
+    
+    @ManyToOne
+    private Sala sala;
 
     /**
      * @deprecated hibernate only

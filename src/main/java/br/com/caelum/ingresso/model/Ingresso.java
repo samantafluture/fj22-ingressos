@@ -20,6 +20,9 @@ public class Ingresso {
 
 	@ManyToOne
 	private Sessao sessao;
+	
+	@ManyToOne
+	private Sala sala;
 
 	@ManyToOne
 	private Lugar lugar;

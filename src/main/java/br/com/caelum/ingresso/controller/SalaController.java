@@ -88,7 +88,7 @@ public class SalaController {
 		return modelAndView;
 	}
 
-	@DeleteMapping("/admin/sala/{id}")
+	@DeleteMapping(value = "/admin/sala/{id}")
 	@ResponseBody
 	@Transactional
 	public void delete(@PathVariable("id") Integer id) {

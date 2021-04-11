@@ -16,6 +16,7 @@ public class LugarDao {
 	private EntityManager manager;
 
 	public void save(Lugar lugar) {
+		//manager.merge(lugar);
 		manager.persist(lugar);
 	}
 

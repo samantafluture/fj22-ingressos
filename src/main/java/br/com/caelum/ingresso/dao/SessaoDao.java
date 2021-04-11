@@ -17,7 +17,8 @@ public class SessaoDao {
 	private EntityManager manager;
 
 	public void save(Sessao sessao) {
-		manager.persist(sessao);
+		manager.merge(sessao);
+		//manager.persist(sessao);
 	}
 
 	public List<Sessao> buscaSessoesDaSala(Sala sala) {
@@ -33,4 +34,8 @@ public class SessaoDao {
 	 public Sessao findOne(Integer id) {
 		 return manager.find(Sessao.class, id);
 	 }
+
+	public void delete(Integer id) {
+		manager.remove(findOne(id));	
+	}
 }
